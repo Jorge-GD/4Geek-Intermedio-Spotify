@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Fragment } from "react";
 import CardSong from "./cardsong.jsx";
-const Spotify = () => {
+import PropTypes from "prop-types";
+const Spotify = props => {
 	const UrlSound = "https://assets.breatheco.de/apis/sound/";
 	const [musicList, setMusicList] = useState("");
 	const [cardMusic, setCardMusic] = useState("");
@@ -40,7 +41,7 @@ const Spotify = () => {
 							number={element.id}
 							key={index}
 							url={element.url}
-							change={changeMusic}
+							change={props.urlMusicFunc}
 						/>
 					);
 				})
@@ -53,12 +54,13 @@ const Spotify = () => {
 			<div>
 				<h1>Todas las Canciones</h1>
 				<div className="capsule">{cardMusic}</div>
-				<div className="songify">
-					<audio src={urlMusic} controls></audio>
-				</div>
 			</div>
 		</Fragment>
 	);
+};
+
+Spotify.propTypes = {
+	urlMusicFunc: PropTypes.func
 };
 
 export default Spotify;
