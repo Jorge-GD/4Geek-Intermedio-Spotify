@@ -1,0 +1,37 @@
+.nav>img{
+    margin: 2rem;
+    
+    border-radius: 10%;
+    width: 250px;
+    height: 250px;
+
+}
+.nav{
+    align-items: end;
+}
+.infoNav{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 1rem;
+
+}
+.infoNav>:nth-child(1){
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+.infoNav>:nth-child(2){
+    font-weight: bold;
+    font-size: 75px;
+    font-family:'Times New Roman', Times, serif;
+}
+.infoNav>:nth-child(3){
+
+    font: normal small-caps bold 30px/30px Roboto;
+
+}
+
+
+
